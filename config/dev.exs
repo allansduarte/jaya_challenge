@@ -4,7 +4,7 @@ import Config
 config :jaya_challenge, JayaChallenge.Repo,
   username: "postgres",
   password: "postgres",
-  hostname: "db",
+  hostname: "localhost",
   database: "jaya_challenge_dev",
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,
