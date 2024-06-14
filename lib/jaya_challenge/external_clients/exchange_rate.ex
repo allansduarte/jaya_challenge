@@ -1,4 +1,8 @@
 defmodule JayaChallenge.ExternalClients.ExchangeRate do
+  @moduledoc """
+  ExchangeRate client interface module.
+  """
+
   use Tesla
 
   plug Tesla.Middleware.BaseUrl, "http://api.exchangeratesapi.io"
