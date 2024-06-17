@@ -7,7 +7,11 @@ defmodule JayaChallenge.Transactions do
 
   alias JayaChallenge.Repo
   alias JayaChallenge.Accounts.Schema.Account
+  alias JayaChallenge.Transactions.Commands.CurrencyConverter
   alias JayaChallenge.Transactions.Schema.Transaction
+
+  @doc "See `JayaChallenge.Transactions.Commands.CurrencyConverter.execute/1`"
+  defdelegate currency_converter(input), to: CurrencyConverter, as: :execute
 
   @doc """
   Gets a single transaction.
