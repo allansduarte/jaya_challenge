@@ -3,9 +3,9 @@ defmodule JayaChallengeWeb.FallbackController do
 
   alias JayaChallengeWeb.{ChangesetView, ErrorView}
 
-  @urn_params "orn:error:invalid_params"
-  @urn_not_found "orn:error:not_found"
-  @urn_conflict "orn:error:conflict"
+  @urn_params "jrn:error:invalid_params"
+  @urn_not_found "jrn:error:not_found"
+  @urn_conflict "jrn:error:conflict"
 
   @validation_errors [:invalid_params]
   @not_found_errors [:not_found]

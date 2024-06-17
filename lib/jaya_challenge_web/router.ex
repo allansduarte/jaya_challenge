@@ -7,6 +7,10 @@ defmodule JayaChallengeWeb.Router do
 
   scope "/api", JayaChallengeWeb do
     pipe_through :api
+
+    resources "/users", AccountsController, only: [:index, :show, :create] do
+      resources "/transactions", TransactionsController, only: [:index, :show, :create]
+    end
   end
 
   # Enables LiveDashboard only for development

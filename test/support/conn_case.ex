@@ -23,6 +23,7 @@ defmodule JayaChallengeWeb.ConnCase do
       import Plug.Conn
       import Phoenix.ConnTest
       import JayaChallengeWeb.ConnCase
+      import JayaChallenge.Factory
 
       alias JayaChallengeWeb.Router.Helpers, as: Routes
 
