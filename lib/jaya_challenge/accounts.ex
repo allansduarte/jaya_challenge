@@ -35,7 +35,7 @@ defmodule JayaChallenge.Accounts do
       ** (Ecto.NoResultsError)
 
   """
-  def get_user!(id) do
+  def get_user(id) do
     Account
     |> Repo.get_by(id: id)
     |> case do
