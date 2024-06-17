@@ -18,7 +18,8 @@ defmodule JayaChallenge.Accounts do
 
   """
   def list_users do
-    Repo.all(Account)
+    Account
+    |> Repo.all()
   end
 
   @doc """
@@ -35,9 +36,10 @@ defmodule JayaChallenge.Accounts do
       ** (Ecto.NoResultsError)
 
   """
-  def get_user!(id) do
+  def get_user(id) do
     Account
     |> Repo.get_by(id: id)
+    |> Repo.preload(:transactions)
     |> case do
       nil -> {:error, :not_found}
       user -> {:ok, user}

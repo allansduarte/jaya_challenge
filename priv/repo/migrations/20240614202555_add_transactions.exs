@@ -1,4 +1,6 @@
 defmodule JayaChallenge.Repo.Migrations.AddTransactions do
+  @moduledoc false
+
   use Ecto.Migration
 
   def change do

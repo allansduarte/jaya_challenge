@@ -1,19 +1,44 @@
 # JayaChallenge
 
-To start your Phoenix server:
+A aplicação conversor de moedas é uma API REST, chamada Jaya Currency Converter, com objetivo de converter valores de uma moeda de origem para uma moeda de destino.
 
-  * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.setup`
-  * Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
+Você pode fazer a conversão nas seguintes moedas:
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+- Real brasileiro
+- Dólar americano
+- Euro
+- Iene japonês
+As moedas serão referidas com o padrão internacional para facilitar a explicação.
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+## Informacoes Tecnicas
 
-## Learn more
+O projeto foi criado todo na linguagem Elixir na versão 1.13 utilizando o framwork Phoenix versão 1.6.
 
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
+Para fazer as taxas de conversão foi utilizado a API do Exchangeratesapi.io
+
+Para a persistência dos dados foi utilizado o PostgreSQL.
+
+Outras bibliotecas que foram utilizadas:
+
+- credo para garantir qualidade
+- sobelow para checar as vulnerabilities do projeto
+- excoveralls manter a cobertura e relatório de testes
+- tesla cliente HTTP para fazer requisições
+
+## Executando
+
+Utilizando o docker-compose/docker, rode o seguinte comando para subir os containers
+
+```bash
+docker-compose up --build
+```
+
+O servidor estará sendo executado em modo DEV - Acesse localhost:4000/api para utilizar a API.
+
+# Testes unitários
+
+Para executar todos os testes unitários, execute o seguinte comando:
+
+```bash
+  mix test
+```

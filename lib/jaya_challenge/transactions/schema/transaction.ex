@@ -5,6 +5,11 @@ defmodule JayaChallenge.Transactions.Schema.Transaction do
 
   alias JayaChallenge.Accounts.Schema.Account
 
+  @typedoc """
+  The transaction schema spec type.
+  """
+  @type t :: %__MODULE__{}
+
   @primary_key {:id, :binary_id, autogenerate: true}
   @foreign_key_type :binary_id
   schema "transactions" do

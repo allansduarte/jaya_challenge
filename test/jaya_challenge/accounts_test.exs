@@ -15,9 +15,10 @@ defmodule JayaChallenge.AccountsTest do
       assert Accounts.list_users() == [user]
     end
 
-    test "get_user!/1 returns the user with given id" do
+    test "get_user/1 returns the user with given id" do
       user = insert(:account)
-      assert Accounts.get_user!(user.id) == {:ok, user}
+      assert {:ok, u} = Accounts.get_user(user.id)
+      assert u.id == user.id
     end
 
     test "create_user/1 with valid data creates a user" do
