@@ -1,0 +1,20 @@
+{
+    "skip_files": [
+      "lib/jaya_challenge/application.ex",
+      "lib/jaya_challenge_web.ex",
+      "lib/jaya_challenge_web/telemetry.ex",
+      "lib/jaya_challenge_web/router.ex",
+      "lib/jaya_challenge_web/views/error_helpers.ex",
+      "lib/jaya_challenge/value_object_schema.ex",
+      "lib/jaya_challenge_web/controllers/fallback_controller.ex",
+      "lib/jaya_challenge/changeset_validation.ex",
+      "lib/jaya_challenge/changeset_to_exchema.ex",
+      "test/support/data_case.ex",
+      "test/support/conn_case.ex",
+      "test/support/factory.ex"
+    ],
+    "coverage_options": {
+      "treat_no_relevant_lines_as_covered": true,
+      "minimum_coverage": 95
+    }
+  }
