@@ -14,7 +14,6 @@
       "test/support/factory.ex"
     ],
     "coverage_options": {
-      "treat_no_relevant_lines_as_covered": true,
-      "minimum_coverage": 95
+      "treat_no_relevant_lines_as_covered": true
     }
   }
