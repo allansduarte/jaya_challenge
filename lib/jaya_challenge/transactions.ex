@@ -5,8 +5,8 @@ defmodule JayaChallenge.Transactions do
 
   import Ecto.Query, warn: false
 
-  alias JayaChallenge.Repo
   alias JayaChallenge.Accounts.Schema.Account
+  alias JayaChallenge.Repo
   alias JayaChallenge.Transactions.Commands.CurrencyConverter
   alias JayaChallenge.Transactions.Schema.Transaction
 

@@ -50,11 +50,13 @@ defmodule JayaChallenge.TransactionsTest do
     end
 
     test "get_transaction/1 with invalid user" do
-      assert {:error, :not_found} = Transactions.get_transaction("828470cf-e1e3-45e6-9b80-14bee1321dcb")
+      assert {:error, :not_found} =
+               Transactions.get_transaction("828470cf-e1e3-45e6-9b80-14bee1321dcb")
     end
 
     test "currency_converter/1 delegates to command execution" do
       user = insert(:account)
+
       input = %{
         account_id: user.id,
         amount: 12,

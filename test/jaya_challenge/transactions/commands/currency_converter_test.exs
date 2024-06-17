@@ -29,6 +29,7 @@ defmodule JayaChallenge.Transactions.Commands.CurrencyConverterTest do
   describe "Currency Converter" do
     test "with valid input" do
       user = insert(:account)
+
       input = %{
         account_id: user.id,
         amount: 12,

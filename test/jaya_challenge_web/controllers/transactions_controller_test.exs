@@ -42,7 +42,9 @@ defmodule JayaChallengeWeb.TransactionsControllerTest do
     test "with non-existent transaction", ctx do
       %{"type" => "jrn:error:not_found"} =
         ctx.conn
-        |> get("/api/users/cd2f9197-c6de-46dd-8e01-eac5828b5211/transactions/cd2f9197-c6de-46dd-8e01-eac5828b5211")
+        |> get(
+          "/api/users/cd2f9197-c6de-46dd-8e01-eac5828b5211/transactions/cd2f9197-c6de-46dd-8e01-eac5828b5211"
+        )
         |> json_response(404)
     end
   end
