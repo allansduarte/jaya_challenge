@@ -3,6 +3,8 @@ defmodule JayaChallenge.Accounts do
   Accounts context.
   """
 
+  import Ecto.Query, warn: false
+
   alias JayaChallenge.Accounts.Schema.Account
   alias JayaChallenge.Repo
 
