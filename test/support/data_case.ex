@@ -25,6 +25,7 @@ defmodule JayaChallenge.DataCase do
       import Ecto.Changeset
       import Ecto.Query
       import JayaChallenge.DataCase
+      import JayaChallenge.Factory
     end
   end
 
