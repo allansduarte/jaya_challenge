@@ -8,18 +8,6 @@ defmodule JayaChallenge.TransactionsTest do
   @valid_attrs %{amount: 10, currency_from: "BRL", currency_to: "USD", rate: 1.24232}
 
   describe "transactions" do
-    test "list_transactions/0 return all transactions" do
-      transaction = insert(:transaction)
-
-      assert Transactions.list_transactions(transaction.account) == [transaction]
-    end
-
-    test "list_transactions/1 return all transactions when passing an user" do
-      transaction = insert(:transaction)
-
-      assert Transactions.list_transactions(transaction.account) == [transaction]
-    end
-
     test "create_transaction/2 return a transaction" do
       user = insert(:account)
       {:ok, transaction} = Transactions.create_transaction(user, @valid_attrs)

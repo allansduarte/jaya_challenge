@@ -10,29 +10,6 @@ defmodule JayaChallenge.Transactions do
   alias JayaChallenge.Transactions.Schema.Transaction
 
   @doc """
-  Returns the list of transactions.
-
-  ## Examples
-
-      iex> list_transactions()
-      [%Transaction{}, ...]
-
-  """
-  def list_transactions(user \\ nil) do
-    if user do
-      query = from t in Transaction, where: t.account_id == ^user.id
-
-      query
-      |> Repo.all
-      |> Repo.preload(:account)
-    else
-      Transaction
-      |> Repo.all()
-      |> Repo.preload(:account)
-    end
-  end
-
-  @doc """
   Gets a single transaction.
 
   Raises `Ecto.NoResultsError` if the Transaction does not exist.
